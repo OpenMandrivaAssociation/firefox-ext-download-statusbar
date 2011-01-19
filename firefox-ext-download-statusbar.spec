@@ -37,10 +37,12 @@ if [ -z "$hash" ]; then
     echo "Failed to find plugin hash."
     exit 1
 fi
-extdir="%{firefox_extdir}/"
+extdir="%{firefox_extdir}/$hash"
 mkdir -p "%{buildroot}$extdir"
+# (tv) xpi packaging doesn't work with that extension (UI issues):
 #cp -af %SOURCE0 "%{buildroot}$extdir/$hash.xpi"
-zip -9 "%{buildroot}$extdir/$hash.xpi" *
+#zip -9 "%{buildroot}$extdir/$hash.xpi" *
+cp -af * "%{buildroot}$extdir/"
 
 %clean
 rm -rf %{buildroot}
