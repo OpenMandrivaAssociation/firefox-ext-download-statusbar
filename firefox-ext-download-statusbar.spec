@@ -1,16 +1,14 @@
-%define debug_package %{nil}
-
 Summary: Download Statusbar extension for firefox
 Name: firefox-ext-download-statusbar
 Version: 0.9.7.2
-Release: %mkrel 4
+Release: %mkrel 5
 License: MPL
 Group:	Networking/WWW
 URL:	https://addons.mozilla.org/fr/firefox/addon/26/
 Source: http://releases.mozilla.org/pub/mozilla.org/addons/26/download_statusbar-%{version}-fx.xpi
 Patch0:	compat-firefox-4.0b9.diff
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-Requires: firefox = %{firefox_epoch}:%{firefox_version}
+Requires: firefox >= %{firefox_epoch}:%{firefox_version}
 BuildRequires: firefox-devel
 Buildarch: noarch
 
