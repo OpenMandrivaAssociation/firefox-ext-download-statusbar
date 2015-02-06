@@ -1,7 +1,7 @@
 Summary: Download Statusbar extension for firefox
 Name: firefox-ext-download-statusbar
 Version: 0.9.8
-Release: 2
+Release: 3
 License: MPL
 Group:	Networking/WWW
 URL:	https://addons.mozilla.org/en_US/firefox/addon/26/
